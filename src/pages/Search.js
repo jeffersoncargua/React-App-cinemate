@@ -9,7 +9,7 @@ export const Search = ({apiPath}) => {
   const queryTerm = searchParams.get("q");
   const {data : movies} = useFetch(apiPath, queryTerm);
 
-  const pageTitle = useTitle(movies.length ===0 ? `No results for ${queryTerm}` :`Results for ${queryTerm}`);
+  useTitle(movies.length ===0 ? `No results for ${queryTerm}` :`Results for ${queryTerm}`);
 
   return (
     <main>
